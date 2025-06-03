@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: user-ui
+  labels:
+    app: user-ui
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+spec:
+  rules:
+    - host: user-ui.davidcamelo.com
+      http:
+        paths:
+          - pathType: ImplementationSpecific
+            backend:
+              service:
+                name: user-ui
+                port:
+                  number: 8080
+  tls:
+    - hosts:
+        - user-ui.davidcamelo.com
+      secretName: user-ui-ingress
