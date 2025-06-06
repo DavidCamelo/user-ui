@@ -16,7 +16,7 @@ spec:
               service:
                 name: user-ui
                 port:
-                  number: 8080
+                  number: 4173
   tls:
     - hosts:
         - user-ui.davidcamelo.com
