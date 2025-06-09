@@ -1,14 +1,16 @@
 // API services for interacting with the backend
+const url = 'https://spring-boot.davidcamelo.com/users';
+
 export const userService = {
   getUsers: async () => {
-    const response = await fetch('https://spring-boot.davidcamelo.com/users');
+    const response = await fetch(url);
     if (!response.ok) {
       throw new Error('Failed to fetch users');
     }
     return response.json();
   },
   createUser: async (user) => {
-    const response = await fetch('https://spring-boot.davidcamelo.com/users', {
+    const response = await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(user),
@@ -20,7 +22,7 @@ export const userService = {
     return response.json();
   },
   updateUser: async (id, user) => {
-    const response = await fetch(`https://spring-boot.davidcamelo.com/users/${id}`, {
+    const response = await fetch(`${url}/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(user),
@@ -32,7 +34,7 @@ export const userService = {
     return response.json();
   },
   deleteUser: async (id) => {
-    const response = await fetch(`https://spring-boot.davidcamelo.com/users/${id}`, {
+    const response = await fetch(`${url}/${id}`, {
       method: 'DELETE',
     });
     if (!response.ok) {
