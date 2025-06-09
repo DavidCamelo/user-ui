@@ -1,16 +1,18 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import federation from '@originjs/vite-plugin-federation'
+import tailwindcss from "@tailwindcss/vite"
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
+    tailwindcss(),
     federation({
     name: 'user-ui',
     filename: 'remoteEntry.js',
     exposes: {
-      './User': './src/user/User.jsx'
+      './ProductsPage': './src/pages/ProductsPage.jsx'
     },
     remotes: {
       components_ui: 'https://components-ui.davidcamelo.com/assets/remoteEntry.js'
