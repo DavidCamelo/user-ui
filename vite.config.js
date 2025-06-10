@@ -15,7 +15,7 @@ export default defineConfig({
       './UsersPage': './src/pages/UsersPage.jsx'
     },
     remotes: {
-      components_ui: 'https://components-ui.davidcamelo.com/assets/remoteEntry.js'
+      components_ui: 'http://components-ui:4173/assets/remoteEntry.js'
     },
     shared: ['react']
     }),
@@ -31,9 +31,9 @@ export default defineConfig({
   },
   preview: {
     cors: {
-      origin: ['*'],
-      methods: ['*'],
-      allowedHeaders: ['*']
+      origin: '*',
+      methods: '*',
+      allowedHeaders: '*'
     },
     allowedHosts: ['user-ui', 'user-ui.davidcamelo.com']
   }
