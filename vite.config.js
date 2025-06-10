@@ -15,7 +15,7 @@ export default defineConfig({
       './UsersPage': './src/pages/UsersPage.jsx'
     },
     remotes: {
-      components_ui: 'http://components-ui:4173/assets/remoteEntry.js'
+      components_ui: 'https://components-ui.davidcamelo.com/assets/remoteEntry.js'
     },
     shared: ['react']
     }),
