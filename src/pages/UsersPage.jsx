@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { userService } from '../services/api';
-import Modal from 'components_ui/Modal';
-import ConfirmationModal from 'components_ui/ConfirmationModal';
-import Table from 'components_ui/Table';
-import Form from 'components_ui/Form';
-import './users.css';
+import { Modal } from 'components_ui/Modal';
+import { ConfirmationModal } from 'components_ui/ConfirmationModal';
+import { Table } from 'components_ui/Table';
+import { Form } from 'components_ui/Form';
+import './users-page.css';
 
-const UsersPage = () => {
+export const UsersPage = () => {
   const [users, setUsers] = useState([]);
   const [currentItem, setCurrentItem] = useState(null);
   const [isFormModalOpen, setIsFormModalOpen] = useState(false);
@@ -113,5 +113,3 @@ const UsersPage = () => {
     </div>
   );
 };
-
-export default UsersPage;
