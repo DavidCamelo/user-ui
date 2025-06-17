@@ -1,6 +1,7 @@
 // API services for interacting with the backend
 const createApiService = (resource) => {
     const API_URL = `https://spring-boot.davidcamelo.com/${resource}`;
+    //const API_URL = `http://api-gateway:8080/${resource}`;
 
     const handleResponse = async (response) => {
         if (!response.ok) {
