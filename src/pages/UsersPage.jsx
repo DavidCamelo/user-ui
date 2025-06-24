@@ -7,7 +7,7 @@ export const UsersPage = () => {
     const userConfig = {
         title: 'User Management',
         resourceName: 'User',
-        service: userService,
+        service: userService(false),
         columns: [
             { key: 'id', header: 'ID' },
             { key: 'name', header: 'Name' },
