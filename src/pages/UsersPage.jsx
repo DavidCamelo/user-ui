@@ -13,7 +13,7 @@ export const UsersPage = () => {
             { key: 'lastName', header: 'Last Name' },
         ],
         formFields: [
-            { name: 'name', label: 'Name', type: 'text' },
+            { name: 'name', label: 'Name', type: 'text', required: true },
             { name: 'lastName', label: 'Last Name', type: 'text' },
         ],
     };
