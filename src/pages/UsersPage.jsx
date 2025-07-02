@@ -1,7 +1,6 @@
 import React from 'react';
 import { ResourcePage } from 'components_ui/ResourcePage';
 import { userService } from 'components_ui/api';
-import './users-page.css';
 
 export const UsersPage = () => {
     const userConfig = {
